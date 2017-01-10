@@ -11,7 +11,10 @@
 
   // *** express instance *** //
   const app = express();
-
+  // ***for views*** //
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+  
   // *** config *** //
   appConfig.init(app, express);
   routeConfig.init(app);
